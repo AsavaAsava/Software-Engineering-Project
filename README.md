@@ -1,6 +1,6 @@
 # Software-Engineering-Project
 Group 5 - Semester Project
-###Contributors
+### Contributors
 1.	Aman Vasani	Aman.vasani@strathmore.edu
 2.	Jeevan Sehmi	Singh.sehmi@strathmore.edu
 3.	Wayne Asava	Wayne.asava@strathmore.edu
