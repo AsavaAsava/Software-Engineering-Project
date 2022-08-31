@@ -8,4 +8,4 @@ Group 5 - Semester Project
 5.	Michelle Nekesa	Michelle.barasa@strathmore.edu
 6.	Emmanuel Omondi	Emmanuel.omondi2021@strathmore.edu
 7.	Olive Menorah	Olive.nyangor@strathmore.edu
-8.	Jerome Mahia	Jerome.mahia@strathmore.edu
+8.	Jerome Mahia	Jerome.mahia@strathmore.edu - Accessed
