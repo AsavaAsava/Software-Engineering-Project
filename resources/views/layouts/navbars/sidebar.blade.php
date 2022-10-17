@@ -1,4 +1,4 @@
-<div class="sidebar" data-image="{{ asset('light-bootstrap/img/sidebar-5.jpg') }}">
+<div class="sidebar" data-color="blue">
     <!--
 Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
@@ -6,23 +6,27 @@ Tip 2: you can also add an image using data-image tag
 -->
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="http://www.youtube.com" class="simple-text">
+            <a href="#" class="simple-text">
                 {{ __("Thai-Tanic") }}
             </a>
         </div>
         <ul class="nav">
+            <li class="nav-item @if($activePage == 'maps') active @endif">
+                <a class="nav-link" href="{{route('page.index', 'maps')}}">
+                    <i class="nc-icon nc-pin-3"></i>
+                    <p>{{ __("Home") }}</p>
+                </a>
+            </li>
             <li class="nav-item @if($activePage == 'dashboard') active @endif">
                 <a class="nav-link" href="{{route('dashboard')}}">
-                    <i class="nc-icon nc-chart-pie-35"></i>
+                    <i class="nc-icon nc-chart-bar-32"></i>
                     <p>{{ __("Dashboard") }}</p>
                 </a>
             </li>
            
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#laravelExamples" @if($activeButton =='laravel') aria-expanded="true" @endif>
-                    <i>
-                        <img src="{{ asset('light-bootstrap/img/laravel.svg') }}" style="width:25px">
-                    </i>
+                    <i class="nc-icon nc-circle-09"></i>
                     <p>
                         {{ __('Users') }}
                         <b class="caret"></b>
@@ -54,20 +58,20 @@ Tip 2: you can also add an image using data-image tag
             </li>
             <li class="nav-item @if($activePage == 'icons') active @endif">
                 <a class="nav-link" href="{{route('page.index', 'icons')}}">
-                    <i class="nc-icon nc-atom"></i>
+                    <i class="nc-icon nc-grid-45"></i>
                     <p>{{ __("Reservations") }}</p>
                 </a>
             </li>
-            <li class="nav-item @if($activePage == 'maps') active @endif">
-                <a class="nav-link" href="{{route('page.index', 'maps')}}">
-                    <i class="nc-icon nc-pin-3"></i>
-                    <p>{{ __("Receipts") }}</p>
+            <li class="nav-item @if($activePage == 'upgrade') active @endif">
+                <a class="nav-link" href="{{route('page.index', 'upgrade')}}">
+                    <i class="nc-icon nc-tag-content"></i>
+                    <p>{{ __("Inventory") }}</p>
                 </a>
             </li>
             <li class="nav-item @if($activePage == 'notifications') active @endif">
                 <a class="nav-link" href="{{route('page.index', 'notifications')}}">
-                    <i class="nc-icon nc-bell-55"></i>
-                    <p>{{ __("Settings") }}</p>
+                    <i class="nc-icon nc-money-coins"></i>
+                    <p>{{ __("Loyalty Points") }}</p>
                 </a>
             </li>
         </ul>
