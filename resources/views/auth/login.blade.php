@@ -57,9 +57,6 @@
                                         <a class="btn btn-link"  style="color:#23CCEF" href="{{ route('password.request') }}">
                                         {{ __('Forgot password?') }}
                                         </a>
-                                        <a class="btn btn-link" style="color:#23CCEF" href="{{ route('register') }}">
-                                            {{ __('Create account') }}
-                                        </a>
                                     </div>
                                     
                                 </div>

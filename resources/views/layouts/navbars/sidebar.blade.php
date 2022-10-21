@@ -12,7 +12,7 @@ Tip 2: you can also add an image using data-image tag
         </div>
         <ul class="nav">
             <li class="nav-item @if($activePage == 'maps') active @endif">
-                <a class="nav-link" href="{{route('page.index', 'maps')}}">
+                <a class="nav-link" href="{{route('page.index', 'homepage')}}">
                     <i class="nc-icon nc-pin-3"></i>
                     <p>{{ __("Home") }}</p>
                 </a>
@@ -32,16 +32,16 @@ Tip 2: you can also add an image using data-image tag
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse @if($activeButton =='laravel') show @endif" id="laravelExamples">
+                <div class="collapse @if($activeButton =='user-info') show @endif" id="laravelExamples">
                     <ul class="nav">
-                        <li class="nav-item @if($activePage == 'user') active @endif">
-                            <a class="nav-link" href="{{route('profile.edit')}}">
+                        <li class="nav-item @if($activePage == 'user-profile') active @endif">
+                            <a class="nav-link active bg-danger" href="{{route('profile.edit')}}">
                                 <i class="nc-icon nc-single-02"></i>
                                 <p>{{ __("User Profile") }}</p>
                             </a>
                         </li>
                         <li class="nav-item @if($activePage == 'user-management') active @endif">
-                            <a class="nav-link" href="{{route('user.index')}}">
+                            <a class="nav-link active bg-danger" href="{{route('user.index')}}">
                                 <i class="nc-icon nc-circle-09"></i>
                                 <p>{{ __("User Management") }}</p>
                             </a>
@@ -50,26 +50,26 @@ Tip 2: you can also add an image using data-image tag
                 </div>
             </li>
 
-            <li class="nav-item @if($activePage == 'table') active @endif">
-                <a class="nav-link" href="{{route('page.index', 'table')}}">
+            <li class="nav-item @if($activePage == 'orders') active @endif">
+                <a class="nav-link" href="{{route('page.index', 'orders')}}">
                     <i class="nc-icon nc-notes"></i>
                     <p>{{ __("Orders") }}</p>
                 </a>
             </li>
-            <li class="nav-item @if($activePage == 'icons') active @endif">
-                <a class="nav-link" href="{{route('page.index', 'icons')}}">
+            <li class="nav-item @if($activePage == 'reservations') active @endif">
+                <a class="nav-link" href="{{route('page.index', 'reservations')}}">
                     <i class="nc-icon nc-grid-45"></i>
                     <p>{{ __("Reservations") }}</p>
                 </a>
             </li>
-            <li class="nav-item @if($activePage == 'upgrade') active @endif">
-                <a class="nav-link" href="{{route('page.index', 'upgrade')}}">
+            <li class="nav-item @if($activePage == 'inventory') active @endif">
+                <a class="nav-link" href="{{route('page.index', 'inventory')}}">
                     <i class="nc-icon nc-tag-content"></i>
                     <p>{{ __("Inventory") }}</p>
                 </a>
             </li>
-            <li class="nav-item @if($activePage == 'notifications') active @endif">
-                <a class="nav-link" href="{{route('page.index', 'notifications')}}">
+            <li class="nav-item @if($activePage == 'loyalty-points') active @endif">
+                <a class="nav-link" href="{{route('page.index', 'loyalty-points')}}">
                     <i class="nc-icon nc-money-coins"></i>
                     <p>{{ __("Loyalty Points") }}</p>
                 </a>

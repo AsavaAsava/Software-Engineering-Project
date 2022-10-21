@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'user', 'title' => 'Thai-Tanic', 'navName' => 'User Profile', 'activeButton' => 'laravel'])
+@extends('layouts.app', ['activePage' => 'user-profile', 'title' => 'Thai-Tanic', 'navName' => 'User Profile', 'activeButton' => 'user-info'])
 
 @section('content')
     <div class="content">
@@ -11,7 +11,7 @@
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <h3 class="mb-0">{{ __('Edit Profile') }}</h3>
+                                    <h3 class="mb-0">{{ __('Edit User') }}</h3>
                                 </div>
                             </div>
                         </div>
@@ -90,5 +90,74 @@
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <div class="container-fluid">
+            <div class="section-image">
+                <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+                <div class="row">
+
+                    <div class="card col-md-8">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <h3 class="mb-0">{{ __('Create User') }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" action="{{ route('register') }}" autocomplete="off"
+                                enctype="multipart/form-data">
+                                @csrf
+
+                                <h6 class="heading-small text-muted mb-4">{{ __('User Information') }}</h6>
+                                @include('alerts.success')
+        
+                                <div class="pl-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="name">
+                                            <i class="w3-xxlarge fa fa-user"></i>{{ __('Name') }}
+                                        </label>
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="{{ __('Enter a Name') }}" value="{{ old('name') }}" required autofocus>
+        
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="email"><i class="w3-xxlarge fa fa-envelope-o"></i>{{ __('E-Mail Address') }}</label>
+                                        <input type="email" name="email" value="{{ old('email') }}" placeholder="Enter email" class="form-control" required>
+        
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="password"><i class="w3-xxlarge fa fa-eye-slash"></i>{{ __('Password') }}</label>
+                                        <input type="password" name="password" placeholder="Enter a Password" class="form-control" required >
+        
+                                        
+                                    </div>
+                                        
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="password"><i class="w3-xxlarge fa fa-eye-slash"></i>{{ __('Confirm Password') }}</label>
+                                    <input type="password" name="password_confirmation" placeholder="Confirm Password" class="form-control" required autofocus>
+    
+                                    
+                                </div>
+
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-default mt-4">{{ __('Create User') }}</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col">
+                            @foreach ($errors->all() as $error)
+                                <div class="alert alert-warning alert-dismissible fade show" >
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close"> &times;</a>
+                                    {{ $error }}
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
 @endsection

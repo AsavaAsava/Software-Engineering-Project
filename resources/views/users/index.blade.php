@@ -122,6 +122,12 @@
                     </a>
                 </div>
                 <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('page.index', 'homepage')}}">
+                            <i class="nc-icon nc-pin-3"></i>
+                            <p>{{ __("Home") }}</p>
+                        </a>
+                    </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="{{route('dashboard')}}">
                             <i class="nc-icon nc-chart-bar-32"></i>
@@ -140,13 +146,13 @@
                         <div class="collapse  show " id="laravelExamples">
                             <ul class="nav">
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="{{route('profile.edit')}}">
+                                    <a class="nav-link active bg-danger" href="{{route('profile.edit')}}">
                                         <i class="nc-icon nc-single-02"></i>
                                         <p>{{ __("User Profile") }}</p>
                                     </a>
                                 </li>
                                 <li class="nav-item  active">
-                                    <a class="nav-link" href="{{route('user.index')}}">
+                                    <a class="nav-link active bg-danger" href="{{route('user.index')}}">
                                         <i class="nc-icon nc-circle-09"></i>
                                         <p>{{ __("User Management") }}</p>
                                     </a>
@@ -156,25 +162,25 @@
                     </li>
         
                     <li class="nav-item ">
-                        <a class="nav-link" href="{{route('page.index', 'table')}}">
+                        <a class="nav-link" href="{{route('page.index', 'orders')}}">
                             <i class="nc-icon nc-notes"></i>
                             <p>{{ __("Orders") }}</p>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="{{route('page.index', 'icons')}}">
+                        <a class="nav-link" href="{{route('page.index', 'reservations')}}">
                             <i class="nc-icon nc-grid-45"></i>
                     <p>{{ __("Reservations") }}</p>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="{{route('page.index', 'upgrade')}}">
+                        <a class="nav-link" href="{{route('page.index', 'inventory')}}">
                             <i class="nc-icon nc-tag-content"></i>
                     <p>{{ __("Inventory") }}</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('page.index', 'notifications')}}">
+                        <a class="nav-link" href="{{route('page.index', 'loyalty-points')}}">
                             <i class="nc-icon nc-money-coins"></i>
                     <p>{{ __("Loyalty Points") }}</p>
                         </a>
@@ -244,7 +250,7 @@
                                 </p>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="#" class="btn btn-sm btn-default">Add user</a>
+                                <a href=" {{route('profile.edit') }} " class="btn btn-sm btn-default">Add user</a>
                             </div>
                         </div>
                     </div>
@@ -260,28 +266,33 @@
                             <thead>
                                 <tr><th>Name</th>
                                 <th>Email</th>
-                                <th>Start</th>
+                                <th>Created at</th>
+                                <th>Updated at</th>
                                 <th>Actions</th>
                             </tr></thead>
                             <tfoot>
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Start</th>
+                                    <th>Created at</th>
+                                    <th>Updated at</th>
                                     <th>Actions</th>
                                 </tr>
                             </tfoot>
                             <tbody>
-                            
+                                @foreach ($users as $user)
                                                                         <tr>
-                                        <td>Admin Admin</td>
-                                        <td>admin@lightbp.com</td>
-                                        <td>2020-02-25 12:37:04</td>
-                                        <td class="d-flex justify-content-end">
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>{{ $user->created_at }}</td>
+                                        <td>{{ $user->updated_at }}</td>
+                                        <td class="d-flex justify-content-start">
                                                 
-                                                <a href="#"><i class="fa fa-edit"></i></a>
+                                                <a href=" {{route('profile.edit') }} "><i class="fa fa-edit"></i></a>
+                                                <a href="delete/{{ $user->id }}"><i class="fa fa-remove"></i></a>
                                                                                         </td>
                                     </tr>
+                                    @endforeach
                                                                 </tbody>
                         </table>
                     </div>
