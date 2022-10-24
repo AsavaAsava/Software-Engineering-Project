@@ -333,7 +333,7 @@ section{
    color:grey;
 }
 
-.shopping-cart table tr: {
+.shopping-cart table tr {
    text-align: center;
    width: 100%;
 }

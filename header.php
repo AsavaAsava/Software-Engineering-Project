@@ -5,7 +5,7 @@
       <a href="#" class="logo">Thai-Tanic</a>
 
       <nav class="navbar">
-         <a href="admin.php">Edit Inventory</a>
+         <a href="inventory.php">Inventory</a>
          <a href="products.php">Menu</a>
       </nav>
 
