@@ -125,6 +125,12 @@
                                         <label class="form-control-label" for="email"><i class="w3-xxlarge fa fa-envelope-o"></i>{{ __('E-Mail Address') }}</label>
                                         <input type="email" name="email" value="{{ old('email') }}" placeholder="Enter email" class="form-control" required>
         
+
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="user_type">{{ __('Role ID') }}</label>
+                                            <input type="number" name="user_type" placeholder="Enter Role ID...(Admin=10),(Waiter=20),(Inventory=30)" class="form-control" required >
+        
+                                        </div>
                                         
                                     </div>
                                     <div class="form-group">
@@ -141,6 +147,8 @@
     
                                     
                                 </div>
+
+                                
 
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-default mt-4">{{ __('Create User') }}</button>

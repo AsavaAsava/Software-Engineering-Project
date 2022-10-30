@@ -21,17 +21,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Auth::routes();
 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('dashboard');
 
-Route::get('delete/{id}',[App\Http\Controllers\UserController::class, 'destroy']);
+
 
 Route::group(['middleware' => 'auth'], function () {
+	Route::get('role-auth','UserController@role');
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
 	Route::patch('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
 	Route::patch('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
+	Route::get('delete/{id}',[App\Http\Controllers\UserController::class, 'destroy']);
 });
 
 Route::group(['middleware' => 'auth'], function () {

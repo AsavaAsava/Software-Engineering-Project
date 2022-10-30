@@ -388,6 +388,7 @@ body>.navbar-collapse .logo p {
     color: #FFFFFF;
     line-height: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
 }
 
 .sidebar .logo .simple-text,
@@ -607,6 +608,13 @@ body>.navbar-collapse:after {
 body>.navbar-collapse[data-image]:after,
 body>.navbar-collapse.has-image:after {
     opacity: .77;
+}
+
+.sidebar[data-color="Thai-Tanic Orange"]:after,
+body>.navbar-collapse[data-color="black"]:after {
+    background: #e99369;
+    background: linear-gradient(to top, rgb(233,107,105)10%, rgb(233,147,105)100%);
+    background-size: 150% 150%;
 }
 
 .sidebar[data-color="black"]:after,

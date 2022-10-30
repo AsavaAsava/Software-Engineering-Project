@@ -17,11 +17,19 @@ class UserController extends Controller
      */
     public function index(User $model)
     {
+        // $role=DB::select('select * from users where role == Admin');
         $users = DB::select('select * from users');
         return view('users.index', ['users' => $model->paginate(15)],['users'=>$users]);
+    }
+    public function role(User $model)
+    {
+        // $role=DB::select('select * from users where role == Admin');
+        $users_info = DB::select('select * from users');
+        return view('layouts/app',['users_info'=>$users_info]);
     }
 
     public function destroy($id) {
         DB::delete('delete from users where id = ?',[$id]);
+        return redirect()->back();
         }
 }

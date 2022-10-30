@@ -109,7 +109,7 @@
 
     <div class="wrapper ">
 
-        <div class="sidebar" data-color="blue">
+        <div class="sidebar" data-color="Thai-Tanic Orange">
             <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
         
@@ -117,7 +117,7 @@
         -->
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="#" class="simple-text">
+                    <a href="{{route('page.index', 'homepage')}}" class="simple-text">
                         {{ __("Thai-Tanic") }}
                     </a>
                 </div>

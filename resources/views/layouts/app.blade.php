@@ -34,9 +34,15 @@
 
     <body>
         <div class="wrapper @if (!auth()->check() || request()->route()->getName() == "") wrapper-full-page @endif">
+          
+            @if (auth()->check() && request()->route()->getName() != "" && $usertype=='10')
+                @include('layouts.navbars.admin_sidebar')
+                {{-- @include('layouts.navbars.waiter_sidebar') --}}
+            @endif
 
             @if (auth()->check() && request()->route()->getName() != "")
-                @include('layouts.navbars.sidebar')
+                @include('layouts.navbars.waiter_sidebar')
+                {{-- @include('layouts.navbars.waiter_sidebar') --}}
             @endif
 
             <div class="@if (auth()->check() && request()->route()->getName() != "") main-panel @endif">
