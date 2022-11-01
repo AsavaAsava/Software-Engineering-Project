@@ -5,18 +5,17 @@
       <a href="#" class="logo">Thai-Tanic</a>
 
       <nav class="navbar">
-         <a href="inventory.php">Inventory</a>
-         <a href="products.php">Menu</a>
+         <a href="reservations.php">Reservations</a>
       </nav>
 
       <?php
       
-      $select_rows = mysqli_query($conn, "SELECT * FROM `cart`") or die('query failed');
+      $select_rows = mysqli_query($conn, "SELECT * FROM `reservations`") or die('query failed');
       $row_count = mysqli_num_rows($select_rows);
 
       ?>
 
-      <a href="cart.php" class="cart">Current Order <span><?php echo $row_count; ?></span> </a>
+      <a href="reservations.php" class="cart">Current Reservations <span><?php echo $row_count; ?></span> </a>
 
       <div id="menu-btn" class="fas fa-bars"></div>
 
