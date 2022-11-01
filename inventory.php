@@ -7,11 +7,12 @@ if (isset($_POST['add_product'])) {
     $p_category = $_POST['p_category'];
     $p_price = $_POST['p_price'];
     $p_quantity = $_POST['p_quantity'];
+    $total = $p_price * $p_quantity;
     $p_image = $_FILES['p_image']['name'];
     $p_image_tmp_name = $_FILES['p_image']['tmp_name'];
     $p_image_folder = 'uploaded_img/' . $p_image;
 
-    $insert_query = mysqli_query($conn, "INSERT INTO `products`(name, price, image) VALUES('$p_name', '$p_price', '$p_image')") or die('query failed');
+    $insert_query = mysqli_query($conn, "INSERT INTO `inventory`(name, category, price, quantity, image, total) VALUES('$p_name', '$p_category', '$p_price', '$p_quantity', '$p_image', '$total')") or die('query failed');
 
     if ($insert_query) {
         move_uploaded_file($p_image_tmp_name, $p_image_folder);
@@ -91,6 +92,12 @@ if (isset($_POST['add_product'])) {
                         <span class="item">Delete Item</span>
                     </a>
                 </li>
+                <li>
+                    <a href="inventoryuse.php">
+                        <span class="icon"><i class="bi bi-basket"></i></span>
+                        <span class="item">Use Stock</span>
+                    </a>
+                </li>
 
                 <li>
                     <a href="inventoryreport.php">
@@ -110,17 +117,18 @@ if (isset($_POST['add_product'])) {
     </div>
     <div class="section">
         <section>
-            <?php
 
-            if (isset($message)) {
-                foreach ($message as $message) {
-                    echo '<div class="message"><span>' . $message . '</span> <i class="fas fa-times" onclick="this.parentElement.style.display = `none`;"></i> </div>';
-                };
-            };
-
-            ?>
 
             <form action="" method="post" class="add-product-form" enctype="multipart/form-data">
+                <?php
+
+                if (isset($message)) {
+                    foreach ($message as $message) {
+                        echo '<div class="message"><span>' . $message . '</span> <i class="fas fa-times" onclick="this.parentElement.style.display = `none`;"></i> </div>';
+                    };
+                };
+
+                ?>
                 <h3>Add Purchaced Item</h3>
 
                 <input type="text" name="p_name" placeholder="enter the item name" class="box" required>
@@ -136,6 +144,7 @@ if (isset($_POST['add_product'])) {
 
                 <input type="number" name="p_price" min="0" placeholder="enter the item price" class="box" required>
                 <input type="number" name="p_quantity" min="0" placeholder="enter the quantity" class="box" required>
+
                 <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg" class="box" required>
                 <input type="submit" value="add the item" name="add_product" class="btn">
             </form>
