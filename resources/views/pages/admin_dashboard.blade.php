@@ -1,7 +1,7 @@
 @extends('layouts.app', ['activePage' => 'admin_dashboard', 'title' => 'Thai-Tanic', 'navName' => 'Dashboard', 'activeButton' => 'laravel'])
 
 @section('content')
-    <div class="content">
+    <div class="content" style="background-color: #252837;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4">

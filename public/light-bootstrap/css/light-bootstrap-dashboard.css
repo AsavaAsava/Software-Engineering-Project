@@ -201,7 +201,7 @@ h1 .subtitle {
 
 .text-danger,
 .text-danger:hover {
-    color: #FF4A55 !important;
+    color: #ffffff !important;
 }
 
 /*     General overwrite     */
@@ -612,8 +612,14 @@ body>.navbar-collapse.has-image:after {
 
 .sidebar[data-color="Thai-Tanic Orange"]:after,
 body>.navbar-collapse[data-color="black"]:after {
-    background: #e99369;
+    background: #393C49;
     background: linear-gradient(to top, rgb(233,107,105)10%, rgb(233,147,105)100%);
+    background-size: 150% 150%;
+}
+
+.sidebar[data-color="Thai-Tanic Grey"]:after,
+body>.navbar-collapse[data-color="black"]:after {
+    background: #1f1d2b;
     background-size: 150% 150%;
 }
 
@@ -1996,7 +2002,7 @@ fieldset[disabled] .form-control {
     border-radius: 0;
     min-height: 50px;
     max-height: 61px;
-    background-color: rgba(255, 255, 255, 0.96);
+    background: linear-gradient(to top, rgb(233,107,105), rgb(233,147,105));
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -2004,7 +2010,7 @@ fieldset[disabled] .form-control {
     font-weight: 400;
     margin: 5px 0px;
     font-size: 20px;
-    color: #888888;
+    color: #ffffff;
 }
 
 .navbar .navbar-brand:hover {
@@ -2048,7 +2054,7 @@ fieldset[disabled] .form-control {
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
-    color: #888888;
+    color: #ffffff;
     padding: 10px 15px;
     margin: 10px 3px;
     position: relative;

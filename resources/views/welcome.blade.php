@@ -1,13 +1,14 @@
 @extends('layouts/app', ['activePage' => 'welcome', 'title' => 'Thai-Tanic'])
 
 @section('content')
-    <div class="full-page section-image" data-color="black" data-image="{{asset('light-bootstrap/img/full-screen-restaurant.jpg')}}">
+    <div class="full-page section-image" data-image="{{asset('light-bootstrap/img/colour-bg.png')}}">
         <div class="content">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-7 col-md-8">
-                        <h1 class="text-white text-center">{{ __('Welcome to Thai-Tanic.') }}</h1>
-                        <h3 class="text-white text-center">{{ __('Simply The Best!') }}</h3>
+                        <img src="{{asset('light-bootstrap/img/Logo-TT.png')}}" style="margin-left: 35%;">
+                        <h1 class="text-center" style="color: rgb(233,107,105);">{{ __('Welcome to Thai-Tanic.') }}</h1>
+                        <h3 class="text-center" style="color: rgb(233,107,105);">{{ __('Simply The Best!') }}</h3>
                     </div>
                 </div>
             </div>

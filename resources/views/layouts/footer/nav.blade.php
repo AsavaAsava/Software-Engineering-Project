@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" style="background-color: #252837;">
     <div class="container @auth-fluid @endauth">
         <nav>
             <ul class="footer-menu">

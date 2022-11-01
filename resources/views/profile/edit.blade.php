@@ -1,7 +1,7 @@
 @extends('layouts.app', ['activePage' => 'user-profile', 'title' => 'Thai-Tanic', 'navName' => 'User Profile', 'activeButton' => 'user-info'])
 
 @section('content')
-    <div class="content">
+    <div class="content" style="background-color: #252837;">
         <div class="container-fluid">
             <div class="section-image">
                 <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
