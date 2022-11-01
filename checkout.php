@@ -127,7 +127,7 @@ if(isset($_POST['order_btn'])){
 
 </section>
 
-</div>
+   </div>
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
