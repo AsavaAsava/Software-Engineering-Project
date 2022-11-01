@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -26,6 +27,26 @@ class LoginController extends Controller
      *
      * @var string
      */
+
+
+    public function login_redirect($request){
+        
+        $user = User::where('email',$request->email && 'password','=',$request->password)->first();
+
+        if($user!= null && $user->user_type == 10){
+
+            redirect()->view('dashboard');
+        }
+        elseif($user!= null && $user->user_type == 20){
+
+            redirect()->view('orders');
+        }
+        elseif($user!= null && $user->user_type == 30){
+
+            redirect()->view('homepage');
+        }
+    }
+     
     protected $redirectTo = RouteServiceProvider::HOME;
 
     /**

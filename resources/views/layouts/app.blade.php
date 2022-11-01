@@ -28,21 +28,18 @@
         <!-- CSS Files -->
         <link href="{{ asset('light-bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
         <link href="{{ asset('light-bootstrap/css/light-bootstrap-dashboard.css?v=2.0.0') }} " rel="stylesheet" />
-        <!-- CSS Just for demo purpose, don't include it in your project -->
-        <link href="{{ asset('light-bootstrap/css/demo.css') }}" rel="stylesheet" />
     </head>
 
     <body>
         <div class="wrapper @if (!auth()->check() || request()->route()->getName() == "") wrapper-full-page @endif">
           
-            @if (auth()->check() && request()->route()->getName() != "" && $usertype=='10')
+            @if (auth()->check() && request()->route()->getName() != "" &&  auth()->user()->user_type == 10 )
                 @include('layouts.navbars.admin_sidebar')
                 {{-- @include('layouts.navbars.waiter_sidebar') --}}
-            @endif
-
-            @if (auth()->check() && request()->route()->getName() != "")
+                @elseif(auth()->check() && request()->route()->getName() != "" &&  auth()->user()->user_type == 20)
                 @include('layouts.navbars.waiter_sidebar')
-                {{-- @include('layouts.navbars.waiter_sidebar') --}}
+                @else
+                @include('layouts.navbars.inventory_sidebar')
             @endif
 
             <div class="@if (auth()->check() && request()->route()->getName() != "") main-panel @endif">

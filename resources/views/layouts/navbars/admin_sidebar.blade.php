@@ -17,8 +17,8 @@ Tip 2: you can also add an image using data-image tag
                     <p>{{ __("Home") }}</p>
                 </a>
             </li>
-            <li class="nav-item @if($activePage == 'dashboard') active @endif">
-                <a class="nav-link" href="{{route('dashboard')}}">
+            <li class="nav-item @if($activePage == 'admin_dashboard') active @endif">
+                <a class="nav-link" href="{{route('page.index', 'admin_dashboard')}}">
                     <i class="nc-icon nc-chart-bar-32"></i>
                     <p>{{ __("Dashboard") }}</p>
                 </a>

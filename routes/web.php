@@ -25,7 +25,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('dashboard');
 
 
-
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('role-auth','UserController@role');
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
