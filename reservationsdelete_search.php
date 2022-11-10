@@ -143,9 +143,9 @@ if(mysqli_num_rows($select_records)>0){
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['phone_number']; ?></td>
             <td><?php echo $row['email']; ?></td>
-            <td><?php echo $row['time']; ?></td>
-            <td><?php echo $row['date']; ?></td>
-            <td><?php echo $row['capacity']; ?></td>
+            <td><?php echo $row['time_made']; ?></td>
+            <td><?php echo $row['date_made']; ?></td>
+            <td><?php echo $row['quantity']; ?></td>
             <td>
                                         <a href="reservationsdelete.php?delete=<?php echo $row['id']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> delete </a>
                                     </td>

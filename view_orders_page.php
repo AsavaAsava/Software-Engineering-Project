@@ -96,8 +96,16 @@ include ("./get_orders.php")?>
                             <h1 class=\"price-cost\">".order_status($orders["order_status"])."</h1>
                             <h6 class=\"fs-3 text-muted card-subtitle mb-2 subs\">".$orders["street"]."</h6>
                             <h6 class=\"fs-3 text-muted card-subtitle mb-2 subs\">Waiter: ".$orders["name"]."</h6>
-                            <input type=\"number\" value=\"".$orders["id"]."\" name =\"orderID\" id=\"order\" hidden>
-                            <input class=\"btn btn-secondary\" type =\"submit\" style=\"min-width: 100%;margin-bottom: 12px;\" value=\"View Order\">
+                            <h3>");
+                                $order =$orders['total_product'];
+                 
+                                $ordersSplit = explode(",",$order);
+                                foreach($ordersSplit as $item ){
+                                    echo($item);
+                                    
+                                    echo("<br>");
+                                }
+                                echo("</h3>
                             </form>
                             
                     

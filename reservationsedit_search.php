@@ -10,7 +10,7 @@ if(isset($_POST['update_reservation'])){
     $update_date=$_POST['update_date'];
     $update_capacity=$_POST['update_capacity'];
 
-    $update_query=mysqli_query($conn, "UPDATE `reservations` SET name='$update_name', phone_number='$update_phone_number', email='$update_email',time='$update_time', date='$update_date', capacity='$update_capacity' WHERE id='$update_id'");
+    $update_query=mysqli_query($conn, "UPDATE `reservations` SET name='$update_name', phone_number='$update_phone_number', email='$update_email',time_made='$update_time', date_made='$update_date', quantity='$update_capacity' WHERE id='$update_id'");
 
     if($update_query($conn,$sql)){
         header('location:reservationsedit.php');

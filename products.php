@@ -62,7 +62,7 @@ if(isset($message)){
 
       <?php
       
-      $select_products = mysqli_query($conn, "SELECT * FROM `products`");
+      $select_products = mysqli_query($conn, "SELECT * FROM `products` WHERE `availability` = 0");
       if(mysqli_num_rows($select_products) > 0){
          while($fetch_product = mysqli_fetch_assoc($select_products)){
       ?>
