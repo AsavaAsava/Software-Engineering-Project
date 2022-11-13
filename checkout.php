@@ -1,7 +1,7 @@
 <?php
 
 @include 'config.php';
-
+require('session_init.php');
 
 //SUBMITTING THE ORDER
 if(isset($_POST['order_btn'])){
@@ -54,7 +54,7 @@ if(isset($_POST['order_btn'])){
       </div>
       ";
    }
-
+   mysqli_query($conn, "DELETE FROM `cart` "); //Delete after order
 }
 
  
@@ -196,7 +196,7 @@ if(isset($_POST['order_btn'])){
       
       
       ";
-     $delete_query = mysqli_query($conn, "DELETE FROM `neworder` WHERE email = '$email'");
+     
    }
 
 
@@ -218,8 +218,8 @@ if(isset($_POST['order_btn'])){
 
       <div class="flex">
          <div class="inputBox">
-            <span>server name</span>
-            <input type="text" placeholder="enter your name" name="name" required>
+            <span>Waiter</span>
+            <input type="text" value="<?php echo $_SESSION['username']?>" name="name" required readonly>
            
             <input type="submit" value="Redeem Loyalty Points" name="rdmloyalty_btn" class="btn">
        
@@ -232,7 +232,7 @@ if(isset($_POST['order_btn'])){
          <div class="inputBox">
             <span>payment method</span>
             <select name="method">
-               <option value="cash on delivery" selected>cash on devlivery</option>
+               <option value="cash" selected>cash </option>
                <option value="credit cart">credit cart</option>
                <option value="paypal">paypal</option>
             </select>
@@ -253,7 +253,7 @@ if(isset($_POST['order_btn'])){
          
         
       </div>
-      <input type="submit" value="order now" name="order_btn" class="btn">
+      <input type="submit" value="order now" name="order_btn" class="btn" onclick="">
    </form>
 
 </section>

@@ -1,6 +1,7 @@
 <?php
 
 @include 'config.php';
+require_once('session_init.php');
 
 if(isset($_POST['add_to_cart'])){
 

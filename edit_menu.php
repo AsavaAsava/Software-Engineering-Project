@@ -60,11 +60,13 @@ if(isset($_POST['update_product'])){
 
    if($update_query){
       move_uploaded_file($update_p_image_tmp_name, $update_p_image_folder);
+      
+      header('location:edit_menu.php');
       $message[] = 'product updated succesfully';
-      header('location:edit_menu.php');
    }else{
-      $message[] = 'product could not be updated';
+      
       header('location:edit_menu.php');
+      $message[] = 'product could not be updated';
    }
 
 }

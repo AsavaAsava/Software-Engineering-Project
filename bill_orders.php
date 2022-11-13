@@ -99,9 +99,17 @@ include ("./get_orders.php")?>
                                 }
                                 echo("</h3>
                             </form>
-                            <form action=\"process_billing.php\" method=\"POST\" class=\"rForm\"  target=\"_blank\">
+                            <form action=\"generate_receipt.php\" method=\"POST\" class=\"rForm\"  target=\"_blank\">
                             <input type=\"number\" value=\"".$orders["id"]."\" name =\"orderID\" id=\"order\" hidden>
-                            <input class=\"btn btn-secondary\" type =\"submit\" style=\"min-width: 100%;margin-bottom: 12px;\" value=\"Bill Order\">
+                            <input class=\"btn btn-secondary\" type =\"submit\" style=\"min-width: 100%;margin-bottom: 12px;\" value=\"Generate Reciept\">
+                            </form>
+                            <form action=\"confirm_pay.php\" method=\"POST\" class=\"rForm\"  target=\"_blank\">
+                            <input type=\"number\" value=\"".$orders["id"]."\" name =\"orderID\" id=\"order\" hidden>
+                            <input class=\"btn btn-secondary\" type =\"submit\" style=\"min-width: 100%;margin-bottom: 12px;\" value=\"Confirm Cash Payment\">
+                            </form>
+                            <form action=\"process_mpesa.php\" method=\"POST\" class=\"rForm\"  target=\"_blank\">
+                            <input type=\"number\" value=\"".$orders["id"]."\" name =\"orderID\" id=\"order\" hidden>
+                            <input class=\"btn btn-secondary\" type =\"submit\" style=\"min-width: 100%;margin-bottom: 12px;\" value=\"Lipa na M-Pesa\">
                             </form>
                     
                         </div>
@@ -110,6 +118,7 @@ include ("./get_orders.php")?>
                     }
                        
                     ?>
+                    
         </section>
 
     </div>
@@ -129,6 +138,13 @@ include ("./get_orders.php")?>
             if(allCards[i].innerHTML === "Pending" ){
             allCards[i].style.color = 'red';
             }
+        }
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
         }
     </script>
 </body>
