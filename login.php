@@ -8,7 +8,7 @@ session_start();
 <head>
 	<title>Login</title>
 	
-    
+    <link rel="icon" type="image/x-icon" href="pic.jpg">
    <link rel="stylesheet" href="./assets/styles.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>

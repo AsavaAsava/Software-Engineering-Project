@@ -92,7 +92,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="admin.php">
+                    <a href="admin_page.php">
                         <span class="icon"><i class="fas fa-user-shield"></i></span>
                         <span class="item">Admin</span>
                     </a>

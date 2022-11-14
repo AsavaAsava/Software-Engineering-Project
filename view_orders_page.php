@@ -61,7 +61,7 @@ include ("./get_orders.php")?>
                     </a>
                 </li>
                 <li>
-                    <a href="edit-menu.php">
+                    <a href="edit_menu.php">
                         <span class="icon"><i class="bi bi-tools"></i></span>
                         <span class="item">Update Menu</span>
                     </a>

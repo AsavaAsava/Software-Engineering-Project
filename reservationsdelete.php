@@ -20,7 +20,7 @@ if(isset($_GET['delete'])){
     <link rel="stylesheet" href=".\css\reservation.css">
     <link rel="stylesheet" href=".\css\style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="icon" type="image/x-icon" href="restaurant.png">
+    <link rel="icon" type="image/x-icon" href="pic.jpg">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,9 +90,9 @@ if(isset($_GET['delete'])){
 
 
 <li>
-<a href="admin.php">
+<a href="./processing/logout.php">
 <span class="icon"><i class="fas fa-user-shield"></i></span>
-<span class="item">Admin</span>
+<span class="item">Log Out</span>
 </a>
 </li>
 

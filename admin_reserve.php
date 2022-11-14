@@ -24,10 +24,10 @@ if(isset($_GET['delete'])){
     $delete_query=mysqli_query($conn,"DELETE FROM `reservations` WHERE id= $delete_id") or die('query failed');
     if($delete_query){
 
-header('location:admin.php');
+header('location:admin_page.php');
         $message[]='record has been deleted';
     }else{
-        header('location:admin.php');
+        header('location:admin_page.php');
         $message[]='record could not be deleted';
     };
 };
@@ -43,11 +43,11 @@ if(isset($_POST['update_reservation'])){
     $update_query=mysqli_query($conn, "UPDATE `reservations` SET name='$update_name', phone_number='$update_phone_number', email='$update_email',time='$update_time', date='$update_date', capacity='$update_capacity' WHERE id='$update_id'");
 
     if($update_query($conn,$sql)){
-        header('location:admin.php');
+        header('location:admin_page.php');
         $message[]='Record has been updated';
 
     }else{
-        header('location:admin.php');
+        header('location:admin_page.php');
         $message[]='Error in updating record';
     }
 }

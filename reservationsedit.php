@@ -10,9 +10,9 @@ if(isset($_POST['update_reservation'])){
     $update_date=$_POST['update_date'];
     $update_capacity=$_POST['update_capacity'];
 
-    $update_query=mysqli_query($conn, "UPDATE `reservations` SET name='$update_name', phone_number='$update_phone_number', email='$update_email',time='$update_time', date='$update_date', capacity='$update_capacity' WHERE id='$update_id'");
+    $update_query=mysqli_query($conn, "UPDATE `reservations` SET name='$update_name', phone_number='$update_phone_number', email='$update_email',time_made='$update_time', date_made='$update_date', quantity='$update_capacity' WHERE id='$update_id'");
 
-    if($update_query($conn,$sql)){
+    if($update_query){
         header('location:reservationsedit.php');
         $message[]='Record has been updated';
 
@@ -29,7 +29,7 @@ if(isset($_POST['update_reservation'])){
     <link rel="stylesheet" href=".\css\reservation.css">
     <link rel="stylesheet" href=".\css\style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="icon" type="image/x-icon" href="restaurant.png">
+    <link rel="icon" type="image/x-icon" href="pic.jpg">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,7 +99,7 @@ if(isset($_POST['update_reservation'])){
 
 
 <li>
-<a href="admin.php">
+<a href="admin_page.php">
 <span class="icon"><i class="fas fa-user-shield"></i></span>
 <span class="item">Admin</span>
 </a>
@@ -205,7 +205,7 @@ if(isset($_POST['update_reservation'])){
     </div>
 
 
-
+time
 
     <!-- custom js file link  -->
     <script>

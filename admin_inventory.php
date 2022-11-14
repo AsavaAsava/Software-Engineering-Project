@@ -122,7 +122,18 @@ if (isset($_POST['update_product'])) {
                         <span class="item">Inventory Reports</span>
                     </a>
                 </li>
-
+                <li>
+                    <a href="admin_add_users.php">
+                        <span class="icon"></span>
+                        <span class="item">User Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./processing/logout.php">
+                        <span class="icon"></span>
+                        <span class="item">Log Out</span>
+                    </a>
+                </li>
             </ul>
         </div>
         </div>

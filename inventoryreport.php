@@ -48,7 +48,9 @@ if (isset($_POST['update_product'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventory</title>
     <style>
-
+         a{
+            text-decoration: none;
+        }
     </style>
     <!-- Montserrat Font -->
     <link
@@ -128,7 +130,7 @@ if (isset($_POST['update_product'])) {
                         </a>
                     </li>
                     <li>
-                        <a href="admin.php">
+                        <a href="admin_page.php">
                             <span class="icon"><i class="fas fa-user-shield"></i></span>
                             <span class="item">Admin</span>
                         </a>

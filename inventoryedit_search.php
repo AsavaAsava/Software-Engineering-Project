@@ -118,7 +118,7 @@ if (isset($_POST['update_product'])) {
                     </a>
                 </li>
                 <li>
-                    <a href="admin.php">
+                    <a href="admin_page.php">
                         <span class="icon"><i class="fas fa-user-shield"></i></span>
                         <span class="item">Admin</span>
                     </a>
@@ -209,7 +209,7 @@ if (isset($_POST['update_product'])) {
                                 <input type="number" min="0" class="box" required name="update_p_price" value="<?php echo $fetch_edit['price']; ?>">
                                 <input type="number" min="0" class="box" required name="update_p_quantity" value="<?php echo $fetch_edit['quantity']; ?>">
                                 <input type="file" class="box" required name="update_p_image" accept="image/png, image/jpg, image/jpeg" value="<?php echo $fetch_edit['image']; ?>">
-                                <input type="submit" value="update the prodcut" name="update_product" class="btn">
+                                <input type="submit" value="update the product" name="update_product" class="btn">
                                 <input type="reset" value="cancel" id="close-edit" class="option-btn">
                             </form>
 

@@ -105,7 +105,7 @@ foreach($ordersSplit as $item){
 	$pdf->Cell(30);
 	$pdf->Cell(40,10,'Total Cost:');
 	$pdf->Cell(50);
-	$pdf->Cell(40,10,"Ksh. ".$orders['total_price']);
+	$pdf->Cell(40,10,"$ ".$orders['total_price']);
 
     
 

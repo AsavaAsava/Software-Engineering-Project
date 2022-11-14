@@ -8,6 +8,7 @@
       <nav class="navbar">
          <a href="bill_orders.php">Bill Orders</a>
          <a href="products.php">Menu</a>
+         <a href="./processing/logout.php">Log Out</a>
       </nav>
 
       <?php

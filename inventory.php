@@ -106,7 +106,7 @@ if (isset($_POST['add_product'])) {
                     </a>
                 </li>
                 <li>
-                    <a href="admin.php">
+                    <a href="admin_page.php">
                         <span class="icon"><i class="fas fa-user-shield"></i></span>
                         <span class="item">Admin</span>
                     </a>
@@ -129,7 +129,7 @@ if (isset($_POST['add_product'])) {
                 };
 
                 ?>
-                <h3>Add Purchaced Item</h3>
+                <h3>Add Purchased Item</h3>
 
                 <input type="text" name="p_name" placeholder="enter the item name" class="box" required>
 
