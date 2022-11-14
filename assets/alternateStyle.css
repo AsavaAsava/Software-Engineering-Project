@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+body{
+    background: #e2e2e6 ;
+    font-family: Nunito, sans-serif;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #myBtn{
+    position: fixed;
+    top: 90%;
+    left:90%;
+  }
+  #navBar{
+    height: 100px;
+  }
+  #welcomeTxt{
+    display: inline;
+    float: left;
+    width: 60%;
+  }
+  #welcomeTxt h2{
+    font-size: 50px;
+    
+  }
+  .tasks h1{
+    text-decoration: underline;
+  }
+  #logoutContainer{
+   display: inline;
+   float: right;
+  }
+  #myBtn {
+    background-color: #9fa5d5; 
+    border: none; 
+    color: white; 
+    padding: 12px 16px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    position: fixed;
+    top: 90%;
+    left:90%;
+    border-radius: 40px;
+    height: 60px;
+    width: 60px;
+  }
+  
+
+  #myBtn:hover {
+    background-color: RoyalBlue;
+  }
+
+  .taskItem{
+    background-color: white;
+    width: 70%;
+    height: 200px;
+    padding: 20px;
+    box-shadow: 4px 8px 13px 3px  #888888;
+    margin: 10px;
+  }
+  #main{
+    width: 70%;
+    display: inline;
+    float: left;
+  }
+  #uOptions{
+    width: 20%;
+    display: inline;
+    float: right;
+  }
+
+  [type="submit"]{
+    background-color: whitesmoke ;
+    border-radius: 8px;
+    width: 150px;
+    height: 30px;
+  }
+  input{
+
+    width: 250px;
+    height: 30px;
+    margin: 20px;
+    border-style: none;
+    border-bottom: 1px solid #AAA;;
+  }
+  .form1{
+    margin: -20px;
+  }
+  .taskItem span{
+    font-weight: 600;
+  }
+
+  #fStat{
+    color: red;
+  }
+  #tStat{
+    color: green;
+  }
+  .loginForm{
+    width: 30%;
+    box-shadow: 2px 5px 13px 3px  #888888;
+  
+    margin: 50px;
+      margin-left: 500px;
+      margin-top: 100px;
+    padding: 60px;
+    background-color: white;
+      text-align: center;
+  }

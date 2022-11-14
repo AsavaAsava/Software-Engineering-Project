@@ -66,13 +66,14 @@ function Header()
 	// Logo
 	$this->Image('pic.jpg',10,6,30);
 	// Arial bold 15
-	$this->SetFont('Arial','B',15);
+	$this->SetFont('Arial','B',30);
 	// Move to the right
 	$this->Cell(80);
 	// Title
-	$this->Cell(30,10,'Thai-Tanic Reciept',0,0,'C');
+	$this->Cell(30,10,'THAITANIC INVOICE',0,0,'C');
 	// Line break
 	$this->Ln(30);
+    $this->SetFont('Arial','B',20);
 }
 
 // Page footer
@@ -83,7 +84,7 @@ function Footer()
 	// Arial italic 8
 	$this->SetFont('Arial','I',8);
 	// Page number
-	$this->Cell(0,10,'Thank You','C');
+	$this->Cell(0,10,'This is a computer generated receipt. A copy of this receipt has been sent to your email. Thank you for dining with us.','C');
 }
 }
 

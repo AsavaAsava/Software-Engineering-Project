@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+body{
+    background: linear-gradient(to right, rgb(233,107,105) , rgb(233,147,105) );
+    font-family: Nunito, sans-serif;
+}
+.mainContainer{
+	width: 100%;
+	align-content: center;
+	display: flex;
+	justify-content: center;
+}
+.mainForm{
+	width: 50%;
+	box-shadow: 4px 8px 13px 3px  #edbc7b;
+    text-align: left;
+	margin: 50px;
+	padding: 60px;
+	background-color: #1f1d2b;
+}
+.loginForm{
+	width: 30%;
+	box-shadow: 2px 5px 13px 3px  #888888;
+
+	margin: 50px;
+    margin-left: 500px;
+    margin-top: 100px;
+	padding: 60px;
+	background-color: #1f1d2b;
+    text-align: center;
+}
+.mainForm input{
+
+	width: 250px;
+	height: 30px;
+	margin: 20px;
+	border-style: none;
+	border-bottom: 1px solid #AAA;;
+}
+form{
+    text-align: center;
+}
+select{
+	
+	width: 250px;
+	height: 30px;
+	margin: 20px;
+	border-style: none;
+	border-bottom: 1px solid #AAA;;
+}
+.mainForm [type="submit"]{
+	background-color: whitesmoke ;
+	border-radius: 8px;
+	width: 150px;
+	height: 30px;
+}
+.mainForm [type="submit"]:hover{
+	background-color: ghostwhite ;
+	border-radius: 8px;
+}
+.loginForm h1{
+	text-align: center;
+    margin-bottom: 50px;
+    font-weight: 900;
+    font-size: 60px;
+	color: rgb(233,107,105)
+}
+.loginForm input{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+
+	width: 250px;
+	height: 47px;
+	margin: 20px;
+    margin-left: 100px;
+	border-style: none;
+	border-radius: 3px;
+	background-color: rgba(255,255,255,0.7);
+	color: #1f1d2b;
+}
+.mainForm h1{
+	text-align: center;
+    margin-bottom: 50px;
+    font-weight: 900;
+    font-size: 60px;
+}
+.btn{
+   
+   background-color: black;
+   color:#e97d6b;
+   font-size: 1.2rem;
+   padding:1.2rem 3rem;
+   border-radius: .5rem;
+   cursor: pointer;
+   margin-top: 1rem;
+   height: 30px;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover{
+   background-color: #e97d6b;
+   color:black;
+   transition: 0.3s ease-in-out;
+}

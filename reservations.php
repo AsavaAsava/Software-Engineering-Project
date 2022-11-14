@@ -88,12 +88,6 @@ if(isset($_POST['add_reservation'])){
 </a>
 </li>
 
-<li>
-        <a href="reservationsreport.php">
-            <span class="icon"><i class="fas fa-chart-line"></i></span>
-            <span class="item">Reports</span>
-</a>
-</li>
 
 <li>
 <a href="admin.php">
