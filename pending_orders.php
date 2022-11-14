@@ -67,7 +67,7 @@ include ("./get_pending_orders.php")?>
 
 
                 <li>
-                    <a href="#">
+                    <a href="order_reports.php">
                         <span class="icon"><i class="fas fa-chart-line"></i></span>
                         <span class="item">Reports</span>
                     </a>

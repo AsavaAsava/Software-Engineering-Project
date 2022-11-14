@@ -109,6 +109,7 @@ if(isset($message)){
                         <option value ="20">Waiter</option>
                         <option value ="10">Admin</option>
                         <option value ="30">Inventory</option>
+                        <option value ="40">Customer</option>
                     </select>
                     
                     <input type="email" name="email" placeholder="E-Mail Address" class="box">

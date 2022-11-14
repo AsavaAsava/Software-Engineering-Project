@@ -19,7 +19,8 @@ if($row){
         echo "Login Successful";
         if($row['user_type']== 10){header('Location: http://localhost/ThaiTanic/admin_page.php');}
         if($row['user_type']== 20){header('Location: http://localhost/ThaiTanic/products.php');}
-        if($row['user_type']== 30){header('Location: http://localhost/ThaiTanic/inventory.php');}   
+        if($row['user_type']== 30){header('Location: http://localhost/ThaiTanic/inventory.php');}
+        if($row['user_type']== 40){header('Location: http://localhost/ThaiTanic/loyalty_page.php');}   
     }else{
         echo "Unsucessful";
     }

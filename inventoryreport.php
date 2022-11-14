@@ -182,7 +182,7 @@ if (isset($_POST['update_product'])) {
                                     <p >INVENTORY ALERTS</p>
                                     <span class="material-icons-outlined text-red">notification_important</span>
                                 </div>
-                                <span class="font-weight-bold">3</span>
+                                <span class="font-weight-bold">0</span>
                             </div>
 
                         </div>
