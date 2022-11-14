@@ -6,7 +6,7 @@
       <img src="pic.jpg">
 
       <nav class="navbar">
-         <a href="admin_page.php">Back</a>
+         <a href="admin_orders.php">Back</a>
       </nav>
 
 

@@ -17,7 +17,9 @@ include ("./get_billed_orders.php")?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders</title>
     <style>
-
+         a{
+            text-decoration: none;
+        }
     </style>
 </head>
 

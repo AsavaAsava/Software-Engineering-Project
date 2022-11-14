@@ -48,7 +48,9 @@ if (isset($_POST['update_product'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventory</title>
     <style>
-
+             a{
+            text-decoration: none;
+        }
     </style>
     <!-- Montserrat Font -->
     <link
@@ -90,34 +92,34 @@ if (isset($_POST['update_product'])) {
             </div>
             <!--menu item-->
             <ul>
+            <li>
+                    <a href="products.php">
+                        <span class="icon"></span>
+                        <span class="item">Waiters Module</span>
+                    </a>
+                </li>
                 <li>
-                    <a href="admin_page.php" class="active">
-                        <span class="icon"><i class="bi-plus-circle-fill"></i></span>
-                        <span class="item">Dashboard</span>
+                    <a href="inventory.php">
+                        <span class="icon"></span>
+                        <span class="item">Inventory Module</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reservations.php">
+                        <span class="icon"></span>
+                        <span class="item">Reservation Module</span>
                     </a>
                 </li>
                 <li>
                     <a href="admin_orders.php">
-                        <span class="icon"><i class="bi bi-eye-fill"></i></span>
+                        <span class="icon"></span>
                         <span class="item">Order Reports</span>
                     </a>
                 </li>
                 <li>
                     <a href="admin_inventory.php">
-                        <span class="icon"><i class="bi bi-tools"></i></span>
+                        <span class="icon"></span>
                         <span class="item">Inventory Reports</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="admin_reservations.php">
-                        <span class="icon"><i class="bi bi-trash-fill"></i></span>
-                        <span class="item">Reservation Report</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="admin_add_users.php">
-                        <span class="icon"><i class="bi bi-trash-fill"></i></span>
-                        <span class="item">Add/Edit Users</span>
                     </a>
                 </li>
 
